@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html <html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add Account</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Add Account Form</h1>
+<form action="#" th:action="@{/account/add}" th:object="${account}" method="post">
+  <p>IBAN: <input type="text" th:field="*{iban}" /></p>
+  <p>Bank: <input type="text" th:field="*{bank}" /></p>
+  <p>Owner: <input type="text" th:field="*{owner}" /></p>
+  <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
